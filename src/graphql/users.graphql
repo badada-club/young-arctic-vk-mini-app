@@ -1,0 +1,15 @@
+mutation createUser($input: VkEventInput) {
+    createVkUser(input: $input) {
+        id
+        name
+        vkId
+    }
+}
+
+query getUsers {
+    getVkUsers {
+        id
+        name
+        vkId
+    }
+}

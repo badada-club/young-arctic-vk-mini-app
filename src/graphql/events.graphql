@@ -1,0 +1,31 @@
+mutation createEvent($input: VkEventInput) {
+   createVkEvent(input: $input) {
+      id
+      name
+      date
+      description
+      cost
+      location
+      raffleId
+      creatorVkId
+      groupVkId
+   }
+}
+
+query getEvents {
+    getVkEvents {
+     id
+     name
+     date
+     description
+     cost
+     location
+     raffleId
+     creatorVkId
+     groupVkId
+    }
+}
+
+mutation takePart($userId: Int, $raffleId: Int) {
+    takePart(userId: $userId, raffleId: $raffleId)
+}
